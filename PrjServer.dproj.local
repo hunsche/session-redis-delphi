@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<BorlandProject>
+	<Transactions>
+    <Transaction>2017/09/22 16:16:06.000.674,=C:\Users\hunsc\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2017/09/22 23:42:31.034,=C:\Users\hunsc\Documents\Embarcadero\Studio\Projects\FormUnit1.pas</Transaction>
+    <Transaction>2017/09/22 23:42:32.203,=C:\Users\hunsc\Documents\Embarcadero\Studio\Projects\ServerMethodsUnit1.pas</Transaction>
+    <Transaction>2017/09/22 23:42:32.515,=C:\Users\hunsc\Documents\Embarcadero\Studio\Projects\WebModuleUnit1.pas</Transaction>
+    <Transaction>2017/09/22 23:43:05.786,C:\projects\session-redis\FormServer.pas=C:\Users\hunsc\Documents\Embarcadero\Studio\Projects\FormUnit1.pas</Transaction>
+    <Transaction>2017/09/22 23:43:05.786,C:\projects\session-redis\FormServer.dfm=C:\Users\hunsc\Documents\Embarcadero\Studio\Projects\FormUnit1.dfm</Transaction>
+    <Transaction>2017/09/22 23:43:17.233,C:\projects\session-redis\WebModuleServer.pas=C:\Users\hunsc\Documents\Embarcadero\Studio\Projects\WebModuleUnit1.pas</Transaction>
+    <Transaction>2017/09/22 23:43:17.233,C:\projects\session-redis\WebModuleServer.dfm=C:\Users\hunsc\Documents\Embarcadero\Studio\Projects\WebModuleUnit1.dfm</Transaction>
+    <Transaction>2017/09/22 23:43:24.228,C:\projects\session-redis\ServerMethodsServer.pas=C:\Users\hunsc\Documents\Embarcadero\Studio\Projects\ServerMethodsUnit1.pas</Transaction>
+    <Transaction>2017/09/22 23:43:29.926,C:\projects\session-redis\PrjServer.dproj=C:\Users\hunsc\Documents\Embarcadero\Studio\Projects\Project1.dproj</Transaction>
+    <Transaction>2017/09/23 00:11:22.040,=C:\projects\session-redis\delphiredisclient\sources\Redis.Client.pas</Transaction>
+    <Transaction>2017/09/23 00:11:22.059,=C:\projects\session-redis\delphiredisclient\sources\Redis.Command.pas</Transaction>
+    <Transaction>2017/09/23 00:11:22.100,=C:\projects\session-redis\delphiredisclient\sources\Redis.Commons.pas</Transaction>
+    <Transaction>2017/09/23 00:11:22.117,=C:\projects\session-redis\delphiredisclient\sources\Redis.NetLib.Factory.pas</Transaction>
+    <Transaction>2017/09/23 00:11:22.132,=C:\projects\session-redis\delphiredisclient\sources\Redis.NetLib.INDY.pas</Transaction>
+    <Transaction>2017/09/23 00:11:22.148,=C:\projects\session-redis\delphiredisclient\sources\Redis.Values.pas</Transaction>
+    <Transaction>2017/09/23 00:11:22.164,=C:\projects\session-redis\delphiredisclient\sources\RedisMQ.Commands.pas</Transaction>
+    <Transaction>2017/09/23 00:11:22.181,=C:\projects\session-redis\delphiredisclient\sources\RedisMQ.pas</Transaction>
+    <Transaction>2017/09/23 00:23:32.634,=C:\projects\session-redis\Unit1.pas</Transaction>
+    <Transaction>2017/09/23 00:23:38.713,C:\projects\session-redis\TSession.pas=C:\projects\session-redis\Unit1.pas</Transaction>
+    <Transaction>2017/09/23 00:23:58.070,C:\projects\session-redis\uSession.pas=C:\projects\session-redis\TSession.pas</Transaction>
+  </Transactions>
+</BorlandProject>

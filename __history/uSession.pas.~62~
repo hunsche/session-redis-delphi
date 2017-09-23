@@ -1,0 +1,36 @@
+unit uSession;
+
+interface
+
+uses Redis.Client, REST.Json;
+
+type
+
+  TSession = class
+  private
+    Fempresa: Integer;
+    Fbasic: string;
+    procedure Getempresa(const Value: Integer);
+  public
+    property empresa: Integer read Getempresa write Fempresa;
+    property basic: string read Fbasic write fbasic;
+
+  end;
+
+var
+  FSession: TSession;
+
+implementation
+
+{ TSession }
+
+{ TSession }
+
+initialization
+  if not Assigned(FSession) then
+    FSession := TSession.Create;
+
+finalization
+  FSession.Free;
+
+end.
