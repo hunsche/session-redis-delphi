@@ -2,60 +2,52 @@ unit uSession;
 
 interface
 
-uses Redis.Client, REST.Json;
+uses Redis.Client, REST.Json, uRedisConfig;
 
 type
 
   TSession = class
   private
     Fempresa: Integer;
-    Fbasic: string;
-    function Getempresa: Integer;
   public
-    property empresa: Integer read Getempresa write Fempresa;
-    property basic: string read Fbasic write fbasic;
-
+    property empresa: Integer read Fempresa write Fempresa;
   end;
 
-var
-  FSession: TSession;
+  TSessionManager = class
+  public
+    class function GetInstance(Auth: string): TSession;
+  end;
 
 implementation
 
-{ TSession }
+uses
+  Redis.Values;
 
-{ TSession }
+{ TSessionManager }
 
-function TSession.Getempresa: Integer;
+class function TSessionManager.GetInstance(Auth: string): TSession;
 var
   ARedis: TRedisClient;
-  ASession: TSession;
+  ARedisConfig: TRedisConfig;
+  AValue: TRedisString;
 begin
-  ARedis := TRedisClient.Create('192.168.99.100', 32768);
+  Result := nil;
+  ARedisConfig := TRedisConfig.Create;
   try
-    ARedis.Connect;
-    if not ARedis.GET(basic).IsNull then
-    begin
-      ASession := TJson.JsonToObject<TSession>(ARedis.GET(basic).Value);
-      try
-        Fempresa := ASession.fempresa;
-      finally
-        ASession.Free;
+    ARedis := TRedisClient.Create(ARedisConfig.Host, ARedisConfig.Port);
+    try
+      ARedis.Connect;
+      AValue := ARedis.GET(Auth);
+      if not AValue.IsNull then
+      begin
+        Result := TJson.JsonToObject<TSession>(AValue.Value);
       end;
+    finally
+      ARedis.Free;
     end;
   finally
-    ARedis.Free;
+    ARedisConfig.Free;
   end;
-  Result := Fempresa;
 end;
-
-{ TSession }
-
-initialization
-  if not Assigned(FSession) then
-    FSession := TSession.Create;
-
-finalization
-  FSession.Free;
 
 end.

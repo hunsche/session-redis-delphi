@@ -16,11 +16,13 @@ uses
   Redis.Values in 'delphiredisclient\sources\Redis.Values.pas',
   RedisMQ.Commands in 'delphiredisclient\sources\RedisMQ.Commands.pas',
   RedisMQ in 'delphiredisclient\sources\RedisMQ.pas',
-  uSession in 'uSession.pas';
+  uSession in 'uSession.pas',
+  uRedisConfig in 'uRedisConfig.pas';
 
 {$R *.res}
 
 begin
+  ReportMemoryLeaksOnShutdown := True;
   if WebRequestHandler <> nil then
     WebRequestHandler.WebModuleClass := WebModuleClass;
   Application.Initialize;
