@@ -5,3 +5,4 @@ Win32
 *.identcache
 *.res
 *.stat
+*.dproj.local
